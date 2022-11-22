@@ -53,7 +53,7 @@ const plugins = () => {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/favicon.ico"), //this way for copy everythig what do you want
+          from: path.resolve(__dirname, "src/favicon.ico"),
           to: path.resolve(__dirname, "dist"),
         },
       ],
@@ -74,8 +74,7 @@ module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
-    main: ["@babel/polyfill", "./index.jsx"], // if you are developing on JS, you need to change jsx on js
-    analytics: "./analytics.ts", // if you have only one file for JS, you need to delete this entry or if you have more than one, you need to add enteries
+    main: ["@babel/polyfill", "./index.js"],
   },
   output: {
     filename: filename("js"),
@@ -85,18 +84,15 @@ module.exports = {
   resolve: {
     extensions: [
       ".js",
-      ".json",
       ".png",
       ".css",
-      ".less",
       ".sass",
       ".scss",
-      ".ts",
-      ".jsx",
       ".pug",
-    ], //Only for importing to js files
+    ],
     alias: {
-      "@models": path.resolve(__dirname, "src/models"), // yoy can add more alias, if you need
+      "@models": path.resolve(__dirname, "src/models"),
+      "@styles": path.resolve(__dirname, "src/styles"),
       "@": path.resolve(__dirname, "src"),
     },
   },
@@ -125,10 +121,6 @@ module.exports = {
         use: cssLoaders("sass-loader"),
       },
       {
-        test: /\.less$/,
-        use: cssLoaders("less-loader"),
-      },
-      {
         test: /\.(png|jpg|jpeg|svg|gif)$/,
         type: "asset/resource",
       },
@@ -137,35 +129,11 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.xml$/,
-        use: ["xml-loader"],
-      },
-      {
-        test: /\.csv$/,
-        use: ["csv-loader"],
-      },
-      {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: babelOptions(),
-        },
-      },
-      {
-        test: /\.ts$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: babelOptions("@babel/preset-typescript"),
-        },
-      },
-      {
-        test: /\.jsx$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: babelOptions("@babel/preset-react"),
         },
       },
       {
