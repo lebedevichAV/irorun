@@ -1,0 +1,16 @@
+$main-light: #fff;
+$main-darck: #252525;
+$main-color: #e0bea2;
+$main-color-active: #cca88a;
+
+%default-text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.174rem;
+  color: $main-darck;
+}
+
+%default-border {
+  border: 0.5px solid $main-darck;
+}
