@@ -45,7 +45,7 @@ const babelOptions = (preset) => {
 const plugins = () => {
   const base = [
     new HtmlWebpackPlugin({
-      template: "./index.html", //if you are developing on pug, you need to change html to pug
+      template: "./index.pug",
       minify: {
         collapseWhitespace: isProd,
       },
