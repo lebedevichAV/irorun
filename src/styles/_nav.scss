@@ -1,3 +1,19 @@
 .navigation {
-    
+  &__list {
+    list-style: none;
+    display: flex;
+    > * + * {
+      margin-left: 2.67em;
+    }
+  }
+  &__item {
+  }
+  &__link {
+    text-decoration: none;
+    @include setSizeAndLineHeight(0.9375rem, 0.67);
+    color: $nav-text-color;
+    &_active {
+      color: $nav-activ-text-color;
+    }
+  }
 }

@@ -1,0 +1,4 @@
+@mixin setSizeAndLineHeight($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
