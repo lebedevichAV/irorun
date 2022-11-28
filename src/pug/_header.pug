@@ -1,1 +1,7 @@
 include mixins/_libs
+
+header.header
+    .container
+        .header__inner
+            img(src=require("@assets/images/logo.svg"), alt="logo")
+            +nav([{link: "/home", text: "Home"}, {link: "/contact", text: "Contact"}, {link: "/privacy", text: "Privacy"}])
