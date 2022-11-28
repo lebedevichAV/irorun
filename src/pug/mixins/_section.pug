@@ -1,0 +1,10 @@
+mixin section(obj, className)
+    section(class=`section ${className}`)
+        .container
+            .section__inner
+                .section__content
+                    h2.section__title= obj.title
+                    p.section__text= obj.text
+                    .section__icons
+                        img.section__icon(src=require("@assets/images/google-play-icon.svg"))
+                        img.section__icon(src=require("@assets/images/app-store-icon.svg"))
