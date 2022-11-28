@@ -1,0 +1,31 @@
+.section {
+  &__inner {
+    width: 100%;
+    @include setSizeAndLineHeight(1.5rem, 1.5);
+  }
+  &__content {
+    max-width: 38.5%;
+  }
+  &__title {
+    font-weight: 400;
+    @include setSizeAndLineHeight(3.4375rem, 1.09);
+    margin: 0;
+  }
+  &__text {
+  }
+  &__icons {
+    > * + * {
+      margin-left: 0.5rem;
+    }
+  }
+  &__icon {
+  }
+  &_left {
+    margin-left: 4.67em;
+  }
+  &_right {
+    .section__content {
+      margin: 0 5.04em 0 auto;
+    }
+  }
+}
