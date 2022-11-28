@@ -1,7 +1,10 @@
 .navigation {
   &__list {
+    @include setSizeAndLineHeight(0.9375rem, 0.67);
     list-style: none;
     display: flex;
+    margin-left: 11em;
+    padding: 0;
     > * + * {
       margin-left: 2.67em;
     }
@@ -10,7 +13,6 @@
   }
   &__link {
     text-decoration: none;
-    @include setSizeAndLineHeight(0.9375rem, 0.67);
     color: $nav-text-color;
     &_active {
       color: $nav-activ-text-color;
