@@ -2,6 +2,7 @@
   &__inner {
     width: 100%;
     @include setSizeAndLineHeight(1.5rem, 1.5);
+    margin: 11.81% 0;
   }
   &__content {
     max-width: 38.5%;

@@ -28,6 +28,9 @@ body {
 
 .main {
   flex: 1 0 auto;
+  > section + section {
+    margin-top: 300px; // i don't like this solving...
+  }
 }
 .footer {
   flex: 0 0 auto;
