@@ -29,7 +29,7 @@ body {
 .main {
   flex: 1 0 auto;
   > section + section {
-    margin-top: 300px; // i don't like this solving...
+    margin-top: 18.75rem;
   }
 }
 .footer {
