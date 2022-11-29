@@ -3,3 +3,28 @@ include mixins/_libs
 main.main
     +section({title: "Get Instant Loans", text: "Get instant loans with ease on your smartphone."}, "section_left")
     +section({title: "Save on your own terms", text: "Saving give you financial options"}, "section_right")
+    setion.section-card
+        .container
+            .section-card__inner
+                h3.section-card__title How it works
+                .section__cards
+                    -
+                        let cards = [
+                            {
+                                icon: "phone-icon.svg", 
+                                title: "Set up an account", 
+                                text: "Download the app for free, sign up and verify your account."
+                            },
+                            {
+                                icon: "form-icon.svg", 
+                                title: "Apply for a loan", 
+                                text: "Apply for a loan and our technology will run a credit score and decide if you are qualified."
+                            },
+                            {
+                                icon: "get-cash-icon.svg", 
+                                title: "Get your cash", 
+                                text: "If you qualify, your loan be disbursed to your wallet."
+                            }
+                        ];
+                    each obj in cards
+                        +card(obj)

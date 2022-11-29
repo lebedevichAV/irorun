@@ -4,3 +4,10 @@
 @import "@styles/mixins";
 @import "@styles/global";
 @import "@styles/modules/modules";
+
+.section-card {
+    &__title {
+        @include setSizeAndLineHeight(2.8125rem, 3.125rem);
+        font-weight: 400;
+    }
+}
