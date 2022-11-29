@@ -2,7 +2,10 @@
   &__inner {
     width: 100%;
     @include setSizeAndLineHeight(1.5rem, 1.5);
-    margin: 11.81% 0;
+    padding: 9.375rem 0;
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: var(--background-position);
   }
   &__content {
     max-width: 38.5%;
@@ -12,19 +15,25 @@
     @include setSizeAndLineHeight(3.4375rem, 1.09);
     margin: 0;
   }
-  &__text {
-  }
   &__icons {
     > * + * {
       margin-left: 0.5rem;
     }
   }
-  &__icon {
-  }
   &_left {
-    margin-left: 4.67em;
+    .section__inner {
+      --background-image: url("@assets/images/persone-image-01.png");
+      --background-position: right;
+    }
+    .section__content {
+      margin-left: 4.67em;
+    }
   }
   &_right {
+    .section__inner {
+      --background-image: url("@assets/images/persone-image-02.png");
+      --background-position: left;
+    }
     .section__content {
       margin: 0 5.04em 0 auto;
     }

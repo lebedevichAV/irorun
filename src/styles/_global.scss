@@ -28,9 +28,6 @@ body {
 
 .main {
   flex: 1 0 auto;
-  > section + section {
-    margin-top: 18.75rem;
-  }
 }
 .footer {
   flex: 0 0 auto;
