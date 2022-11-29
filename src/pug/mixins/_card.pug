@@ -1,0 +1,5 @@
+mixin card(obj)
+    .card
+        img.card__icon(src=require(`@assets/images/${obj.icon}`) alt="icon")
+        h6.card__title=obj.title
+        p.card__description=obj.text
